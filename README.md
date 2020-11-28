@@ -36,7 +36,7 @@ GET api/v1/basic/manual
 
 #### Example response
 ```json
-# /flip
+# flip
 {
   "payload": "FS Pop-shuvit"
 }
@@ -63,7 +63,7 @@ GET api/v1/advanced/manual
 
 #### Example response
 ```json
-# /flip
+# flip
 {
   "payload": "Fakie FS 180 Varialflip"
 }
@@ -90,7 +90,7 @@ GET api/v1/insane/manual
 
 #### Example response
 ```json
-# /flip
+# flip
 {
   "payload": "Switch BS 360 Inward pressureflip"
 }
