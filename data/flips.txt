@@ -1,0 +1,18 @@
+FS Shuvit
+FS Pop-shuvit
+BS Shuvit
+BS Pop-shuvit
+Kickflip
+Heelflip
+Varialflip
+Varialheelflip
+Inward heelflip
+Hardflip
+360-flip
+Lazer-flip
+Lazer-heel
+Pressureflip
+Inward pressureflip
+Impossible
+Fingerflip
+Underflip

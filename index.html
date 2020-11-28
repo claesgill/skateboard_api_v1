@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skatetricks</title>
+</head>
+<body>
+    <h1>Trick generator</h1>
+    <h2 id="trick">Choose a trick!</h2>
+    <form id="tricks">
+        <select id="difficulty">
+            <option selected value="basic">basic</option>
+            <option value="advanced">advanced</option>
+            <option value="insane">insane</option>
+        </select>
+        <select id="trickType">
+            <option selected value="flip">flip</option>
+            <option value="grind">grind</option>
+            <option value="manual">manual</option>
+        </select>
+        <input type="button" value="Get trick!" onclick="getTrick()">
+    </form>
+</body>
+<script>
+    async function getTrick(difficulty, trick){
+        const difficulties = document.getElementById("difficulty")
+        for(const difficulty of difficulties){
+            if(difficulty.selected){
+                var diffValue = difficulty.value
+                break
+            }
+        }
+        const tricks = document.getElementById("trickType")
+        for(const trick of tricks){
+            if(trick.selected){
+                var trickValue = trick.value
+                break
+            }
+        }
+
+        const url = `http://127.0.0.1:5000/api/v1/${diffValue}/${trickValue}`
+        let data = await fetch(url, {
+            method: "GET",
+            mode: "cors"
+        }).then(res => {
+            return res.json()
+        }).catch(e => { 
+            console.log(e)
+            console.warn("Could not connect to database.")
+            return "Error ..."
+        })
+        if(data.payload){
+            document.getElementById("trick").innerHTML = data.payload
+        } else {
+            document.getElementById("trick").innerHTML = data
+        }
+    }
+</script>
+</html>
