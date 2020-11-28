@@ -2,9 +2,9 @@
 This is a API for fetching random skateboard tricks. 
 
 1. [Usage](#usage)
-2. [api/v1/basic](#api-v1-basic)
-3. [api/v1/advanced](#api-v1-advanced)
-4. [api/v1/insane](#api-v1-insane)
+2. [api/v1/basic](#apiv1basic)
+3. [api/v1/advanced](#apiv1advanced)
+4. [api/v1/insane](#apiv1insane)
 5. [TODOs](#todos)
 
 
@@ -26,11 +26,12 @@ python3 -m http.server
 Should now be available at [localhost:8000](http://localhost:8000).
 
 ## api/v1/basic
-Includes only one trick combination
-```
-api/v1/basic/flip
-api/v1/basic/grind
-api/v1/basic/manual
+Includes only one trick combination.
+
+```http
+GET api/v1/basic/flip
+GET api/v1/basic/grind
+GET api/v1/basic/manual
 ```
 
 #### Example response
@@ -52,11 +53,12 @@ api/v1/basic/manual
 ```
 
 ## api/v1/advanced
-Includes two trick combinations
-```
-api/v1/advanced/flip 
-api/v1/advanced/grind
-api/v1/advanced/manual
+Includes two trick combinations.
+
+```http
+GET api/v1/advanced/flip 
+GET api/v1/advanced/grind
+GET api/v1/advanced/manual
 ```
 
 #### Example response
@@ -78,11 +80,12 @@ api/v1/advanced/manual
 ```
 
 ## api/v1/insane
-Includes three or more trick combinations
-```
-api/v1/insane/flip
-api/v1/insane/grind
-api/v1/insane/manual
+Includes three or more trick combinations.
+
+```http
+GET api/v1/insane/flip
+GET api/v1/insane/grind
+GET api/v1/insane/manual
 ```
 
 #### Example response
